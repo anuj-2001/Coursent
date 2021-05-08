@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IT-Project</title>
+    <link rel="stylesheet" href="/css/add.css">
+    <link rel="stylesheet" href="/css/course-cards.css">
+  </head>
+<body>
+<div class="topnav-1">
+    <a href="/authhome">Home</a>
+    <a class="active" href="/dashboard">Dashboard</a>
+    <a href="/auth/logout">Log Out</a>
+    <p style="text-align:right;color:white;font-size:15px;padding-right:10px;font-weight:500;">Welcome, {{firstname}}</p>
+</div>
+<div class="gap"></div>
+<div class="topnav">
+        <a  href="/addcourse">Start New Course</a>
+        <a class="active" href="/dashboard">My Courses</a>
+</div>
+<h1>My Courses</h1>
+
+{{#if courses}}
+   <div id="grid">
+    {{#each courses}}
+        {{!-- <td><a href="//{{_id}}">{{courseName}}</a></td> --}}
+                {{!-- <div class="col" ontouchstart="this.classList.toggle('hover');">
+                    <a href="/coursestream/{{_id}}">
+                    <div class="container">
+                        <div class="front" style="background-image: url(./assets/ml.jpg)">
+                            <div class="inner">
+                                <p>{{courseName}}</p>
+                                <span>Lorem ipsum</span>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div> --}}
+             
+                    <div class="course-card">
+                        <img class="thumbnail" src="https://edyoda.s3.amazonaws.com/media/blog-images/learn_machine_learning_courses_online.png" alt="Machine Learning"/>
+                        <h3>{{courseName}}</h3>
+                        <span class="author">{{../firstname}}</span>
+                        <span class="date"> | 23 Aug 2019</span>
+                        <p class="disc"> 
+                            {{stripTags (stripNbsp (truncate courseDescription 100))}}
+                        </p>
+                        <input style="margin:auto;justify-content:center" type="submit" value="Read More" onclick="location.href = '/coursestream/{{_id}}';">
+                    </div>
+              
+    {{/each}}
+      </div>
+{{else}}
+<p>You have not created any courses</p>
+{{/if}}    
+</body>

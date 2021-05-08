@@ -1,0 +1,211 @@
+ .topnav {
+    overflow: hidden;
+    background-color: #004E7C;
+  }
+  
+  .topnav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .topnav a.active {
+    background-color: white;
+    color: #004E7C;
+    border: 1px solid #004E7C;
+  }
+  *{
+    box-sizing: border-box;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column-1 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+  }
+  
+  /* Clear floats after the columns */
+  .row-1:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .column-2 {
+    float: left;
+    width: 25%;
+    padding: 10px;
+  }
+  
+  /* Clear floats after the columns */
+  .row-2:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .column-3 {
+    float: left;
+    width: 25%;
+    padding: 10px;
+  }
+  
+  /* Clear floats after the columns */
+  .row-3:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .column-4 {
+    float: left;
+    color: #004E7C;
+    width: 33.3%;
+    padding: 10px;
+  }
+  
+  /* Clear floats after the columns */
+  .row-4:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.container-1{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.container .btn{
+    margin-top: 50px;
+    margin-left: 50%;
+    transform:translateX(-50%);
+    width: 200px;
+    height: 50px;
+    border: none;
+    outline : none;
+    background:#004E7C;
+    cursor:pointer;
+    font-size: 16px;
+    color :white;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: .3s;
+}
+.btn{
+  
+  
+  width: 100px;
+  height: 20px;
+  border: none;
+  outline : none;
+  background:#004E7C;
+  cursor:pointer;
+  font-size: 16px;
+  color :white;
+  border-radius: 4px;
+  transition: .3s;
+}
+.btn:hover{
+  opacity: .7;
+}
+.container .btn:hover{
+    opacity:.7 ;
+}
+
+#text-1{
+    font-size: 70px;
+    font-weight: normal;
+    color: #004E7C;
+}
+#text-3{
+    font-size: 100px;
+    font-weight:bold;
+    text-align: center;
+    color: #004E7C
+}
+.container-2{
+    margin-top: 20px;
+}
+.container{
+    padding-top: 50px;
+    padding-left: 50px;
+    line-height: 300%;
+}
+.container-3{
+    background-color: #EEFBFB;
+}
+.container-3 .container-text{
+    padding-top: 10px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+}
+ .container-4{
+        background: white;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-top: 15px;
+} 
+.p-text{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+.container-head{
+    background-color:#EEFBFB ;
+    width: 700px;
+    font-size: 30px;
+    height: 100px;
+    margin-top: 10px;
+    color: #004E7C;
+    padding-left: 150px;
+    margin-bottom: 30px;
+}
+.container-tail{
+    background-color:#EEFBFB ;
+    width: 700px;
+    font-size: 30px;
+    height: 100px;
+    margin-top: 10px;
+    color: #004E7C;
+    margin-bottom: 30px;
+    float: right;
+    text-align: center;
+}
+.container-tail h1{
+    margin: auto;
+}
+.container-para{
+    padding-left:20px;
+    font-size: 20px;
+    text-align: left;
+    font-weight: 600;
+    width: 1000px;
+}
+.circular-image{
+    border-radius: 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid #004E7C;
+}
+.footer{
+    display:inline-block;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:#004E7C;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+  }
+ 

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IT-Project</title>
+    <link rel="stylesheet" href="/css/add.css">
+  </head>
+<body>
+    <div class="topnav-1">
+    <a href="/authhome">Home</a>
+    <a class="active" href="/dashboard">Dashboard</a>
+    <a href="#Logout">Log Out</a>
+    </div>
+    <div class="gap"></div>
+    <div class="topnav">
+        <a class="active" href="/addcourse">Start New Course</a>
+        <a href="/dashboard">My Courses</a>
+    </div>
+<form method="POST" action="/addcourse">
+    <div class="container">
+        <div class="container-2">
+            <p>Course Name</p>
+        </div>
+        <div class="container-3">
+            <input type="text" id="courseName" name="courseName">
+        </div>  
+        <div class="container-2">
+            <p>Course Description</p>
+        </div>
+        <div class="container-3">
+            <textarea id="courseDescription" name="courseDescription" type="text"></textarea>
+        </div>  
+        <div class="container-2">
+            <p>Prerequisite</p>
+        </div>
+        <div class="container-3">
+            <textarea type="text" id="coursePrerequisite" name="coursePrerequisite"></textarea>
+        </div>  
+        <div class="container-2">
+            <p>Week 1</p>
+        </div>
+        <div class="container-3">
+            <textarea id="courseWeek1" name="courseWeek1" type="text"></textarea>
+        </div>
+        <div class="container-3">
+            <input  type="submit" value="Submit" id="input-submit">  
+        </div>
+    </div>
+</form>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.14.1/ckeditor.js"
+        integrity="sha256-bEIQpI72w9NJuIVhTLFUF2/8uxl0u5800r8ddViuv+o=" crossorigin="anonymous"></script>
+    <script>
+        CKEDITOR.replace('coursePrerequisite', {
+            plugins: 'wysiwygarea, toolbar, basicstyles, link'
+        })
+        CKEDITOR.replace('courseDescription', {
+            plugins: 'wysiwygarea, toolbar, basicstyles, link'
+        })
+        CKEDITOR.replace('courseWeek1', {
+            plugins: 'wysiwygarea, toolbar, basicstyles, link'
+        })
+    </script>
+</body>
+</html>
+

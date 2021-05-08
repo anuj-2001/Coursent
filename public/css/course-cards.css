@@ -1,0 +1,163 @@
+*{
+    box-sizing: border-box;
+  }
+  h1{
+    color:#004E7C;
+    text-align: center;
+  }
+  body
+  {
+      background-color: white;
+      font-family: 'Raleway',sans-serif;
+  }
+
+  #top-bar
+  {
+      width:100%;
+      background-color: white;
+      padding: 16px 50px;
+  }
+
+  #logo
+  {
+     
+      color: #0048ff;
+      font-weight: 900;
+      font-size: 32px;
+      margin: 0;
+      opacity: 5;
+  }
+
+  #stories
+  {
+      font-size: 16px;
+      font-weight: 500;
+      color: black;
+      
+      font-style: italic;
+      margin:0;
+      opacity: 5;
+  }
+
+  #drop-down
+  {
+      color: #000;
+      padding-top: 0;
+      padding-left: 70px;
+      font-size: 14px;
+  }
+
+  #trend
+  {
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 1.94;
+  }
+
+  #filter
+  {
+      margin-left: 8px;
+      font-size: 14px;
+      font-family: 600;;
+  }
+  .btn-active
+  {
+      background-color:#0084ff ;
+      color:white;
+      border: 1px solid #0084ff;
+      border-radius: 30px;
+      padding: 6px 14px;
+      display: inline-block;
+      margin: 5px;
+      font-size: 12px;
+  }
+  
+  .btn
+  {
+      color: #0084ff;
+      border: 1px solid #0084ff;
+      border-radius: 30px;
+      padding: 6px 14px;
+      display: inline-block;
+      margin: 5px;
+      font-size: 12px;
+  }
+
+  #categories-section
+  {
+      width:100%;
+      max-width: 990px;
+      margin: 2% auto;
+  }
+  #grid
+  {
+      width:100%;
+      max-width: 990px;
+      margin: 2% auto;
+
+  }
+  .course-card
+  {
+      width: 31%;
+      height: 430px;
+      margin: 1%;
+      vertical-align: top;
+      display: inline-block;
+      box-shadow: 2px 2px 4px #ccc;
+      border-radius: 5px;
+  }
+
+  .thumbnail
+  {
+      width: 100%;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+
+  }
+
+  h3
+  {
+      padding: 10px 24px;
+      color: #000;
+      font-size: 18px;
+      text-align: left;
+      margin: 0;
+      font-weight: 600;
+  }
+
+  .author
+  {
+      padding-top: 4px;
+      padding-left: 24px;
+      margin: 0;
+      font-size: .9em;
+      font-weight: 500;
+      line-height: 2;
+      color: #0096ff;
+      text-align: left;
+  }
+
+  .date
+  {
+      
+      padding-top: 4px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      font-style: normal;
+      color: #000;
+  }
+  .disc
+  {
+      padding: 0 24px;
+      opacity: .5;
+      font-size: 14px;
+      font-weight: 400;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.43;
+      letter-spacing: .35px;
+      text-align: left;
+      color: rgba(0,0,0.6);
+      margins:4px 0;
+  }

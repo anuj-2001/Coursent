@@ -1,0 +1,100 @@
+.topnav {
+    overflow: hidden;
+    background-color: #004E7C;
+  }
+  
+  .topnav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    width: 50%;
+  }
+  .topnav a.active {
+    background-color: white;
+    color: #004E7C;
+    border: 1px solid #004E7C;
+  }
+  .gap{
+    height: 10px;
+  }
+
+  .topnav-1 {
+    overflow: hidden;
+    background-color: #004E7C;
+  }
+  
+  .topnav-1 a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .topnav-1 a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .topnav-1 a.active {
+    background-color: white;
+    color: #004E7C;
+    border: 1px solid #004E7C;
+  }
+  * {
+    box-sizing: border-box;
+  }
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #3689b9;
+  color: white;
+  padding: 15px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #004E7C;
+}
+
+.container {
+        margin: auto;
+        width: 80%;
+        padding: 10px;
+        margin-bottom:100px;
+}
+.container-2{
+    color: #004E7C;
+    width: 30%;
+    font-size: 30px;
+    font-weight: 500;
+    margin-left: 30px;
+    margin-top: 0px;
+}
+.container-3{
+    color: #004E7C;
+    width: 70%;
+    margin-left: 30px;
+    margin-top: -10px;
+
+}
+textarea{
+    background-color: white;
+    height: 150px;
+}

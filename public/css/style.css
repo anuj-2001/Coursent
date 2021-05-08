@@ -1,0 +1,48 @@
+*{
+  box-sizing: border-box;
+}
+p {
+    margin: 10px 0 !important;
+  }
+  
+  .login-container {
+    width: 400px;
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .fa-small {
+    font-size: 16px !important;
+  }
+  
+  .btn-float {
+    float: left;
+    margin-right: 10px;
+  }
+  
+  .img-small {
+    width: 180px;
+  }
+  .topnav {
+    overflow: hidden;
+    background-color: #004E7C;
+  }
+  
+  .topnav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .topnav a.active {
+    background-color: white;
+    color: #004E7C;
+    border: 1px solid #004E7C;
+  }
+  

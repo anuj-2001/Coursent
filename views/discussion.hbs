@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<style>
+			.gap{
+				height: 10px;
+			}
+
+			.topnav-1 {
+				overflow: hidden;
+				background-color: #004E7C;
+			}
+			
+			.topnav-1 a {
+				float: left;
+				color: white;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+				font-size: 17px;
+			}
+			.topnav-1 a:hover {
+				background-color: #ddd;
+				color: black;
+			}
+			.topnav-1 a.active {
+				background-color: white;
+				color: #004E7C;
+				border: 1px solid #004E7C;
+			}
+				.topnav {
+				overflow: hidden;
+				background-color: #004E7C;
+			}
+			
+			.topnav a {
+				float: left;
+				color: white;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+				font-size: 17px;
+				width: 50%;
+			}
+			.topnav a.active {
+				background-color: white;
+				color: #004E7C;
+				border: 1px solid #004E7C;
+			}
+			* {
+				box-sizing: border-box;
+			}
+		</style>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+			integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="css/discussion.css" />
+		<title>IT-Project</title>
+	</head>
+	<body>
+		<div class="topnav-1">
+    <a href="/authhome">Home</a>
+    <a class="active" href="/dashboard">Dashboard</a>
+    <a href="/auth/logout">Log Out</a>
+	</div>
+	<div class="gap"></div>
+		<div class="topnav">
+			<a  href="/coursestream">Stream</a>
+			<a class="active" href="/discussion">Discussion</a>
+		</div>
+		<div class="join-container">
+			<main class="join-main">
+				<form action="/chat">
+					<div class="form-control">
+						<label for="username">Username</label>
+						<input
+							type="text"
+							name="username"
+							id="username"
+							placeholder="Enter username..."
+							required
+						/>
+					</div>
+					<div class="form-control">
+						<label for="room">Room</label>
+						<select name="room" id="room">
+							<option value="JavaScript">JavaScript</option>
+							<option value="Python">Python</option>
+							<option value="PHP">PHP</option>
+							<option value="C#">C#</option>
+							<option value="Ruby">Ruby</option>
+							<option value="Java">Java</option>
+						</select>
+					</div>
+					<button type="submit" class="btn">Join Chat</button>
+				</form>
+			</main>
+		</div>
+	</body>
+</html>
