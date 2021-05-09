@@ -3,10 +3,11 @@ const chatForm = document.getElementById('chat-form');
 const chatMessages = document.querySelector('.chat-messages');
 const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
-
 const socket = io();
-
+const username = firstname+lastname;
+const room = courseName;
 //Get username and room from url
+
 
 const {username, room} = Qs.parse(location.search,{
     ignoreQueryPrefix: true,

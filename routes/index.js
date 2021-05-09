@@ -35,11 +35,66 @@ router.get('/addcourse', function(req, res) {
    });
 });
 
-router.get('/discussion', function(req, res) {
-  res.render('discussion', {
-      layout: '',
-   });
-});
+router.get('/chat/:id', ensureAuth, async (req, res) => {
+  try {
+    // let course = await Course.findById(req.params.id).populate('user').lean()
+    const requestedID=req.params.id;
+    console.log(requestedID)
+    Course.findOne({_id:requestedID}, async function(err,post){
+      const courses = await Course.find({ user: req.user.id }).lean()
+          if(!err){
+            res.render('chat', {
+                  layout:'',
+                  courseName : post.courseName,
+                  courseTitle : post.courseTitle,
+                  courseDescription : post.courseDescription,
+                  coursePrerequisite : post.coursePrerequisite,
+                  courseWeek1 : post.courseWeek1,
+                  firstname: req.user.firstName,
+                  lastname:req.user.lastname,
+                  courses,
+                  requestedID
+                });
+          }
+        })
+    // if (course.user._id != req.user.id) {
+    //   console.error(err)
+    // } else {
+    //   res.render('/coursestream', {
+    //     course,
+    //   })
+    // }
+  } catch (err) {
+    console.error(err)
+  }
+})
+
+router.get('main', ensureAuth, async (req, res) => {
+  try {
+    // let course = await Course.findById(req.params.id).populate('user').lean()
+    const requestedID=req.params.id;
+    console.log(requestedID)
+    Course.findOne({_id:requestedID}, async function(err,post){
+      const courses = await Course.find({ user: req.user.id }).lean()
+          if(!err){
+            res.render('chat', {
+                  layout:'',
+                  courseName : post.courseName,
+                  courseTitle : post.courseTitle,
+                  courseDescription : post.courseDescription,
+                  coursePrerequisite : post.coursePrerequisite,
+                  courseWeek1 : post.courseWeek1,
+                  firstname: req.user.firstName,
+                  lastname:req.user.lastname,
+                  courses,
+                  requestedID
+                });
+          }
+        })
+  } catch (err) {
+    console.error(err)
+  }
+})
 
 router.get('/chat', function(req, res) {
   res.render('chat', {
@@ -67,15 +122,18 @@ router.get('/coursestream/:id', ensureAuth, async (req, res) => {
     // let course = await Course.findById(req.params.id).populate('user').lean()
     const requestedID=req.params.id;
     console.log(requestedID)
-    Course.findOne({_id:requestedID},function(err,post){
+    Course.findOne({_id:requestedID},async function(err,post){
           if(!err){
+            const courses = await Course.find({ user: req.user.id }).lean()
             res.render("course-stream", {
                   layout:'',
                   courseName : post.courseName,
                   courseTitle : post.courseTitle,
                   courseDescription : post.courseDescription,
                   coursePrerequisite : post.coursePrerequisite,
-                  courseWeek1 : post.courseWeek1
+                  courseWeek1 : post.courseWeek1,
+                  courses,
+                  requestedID
                 });
           }
         })
