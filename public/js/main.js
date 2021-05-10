@@ -3,17 +3,14 @@ const chatForm = document.getElementById('chat-form');
 const chatMessages = document.querySelector('.chat-messages');
 const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
+
+
+const room = document.getElementById('room-name').getAttribute("target");
+const username = document.getElementById('author').getAttribute("target");
+console.log(username+" "+room);
 const socket = io();
-const username = firstname+lastname;
-const room = courseName;
-//Get username and room from url
-
-
-const {username, room} = Qs.parse(location.search,{
-    ignoreQueryPrefix: true,
-});
- 
 socket.emit('joinRoom',{username,room});
+
 
 //Get room and users
 socket.on('roomUsers',({room,users})=>{

@@ -12,16 +12,18 @@
     <a href="/authhome">Home</a>
     <a class="active" href="/dashboard">Dashboard</a>
     <a href="/auth/logout">Log Out</a>
+    <p id="author" target="{{firstname}}" style="text-align:right;color:white;font-size:15px;padding-right:10px;font-weight:500;">Welcome, {{firstname}}</p> 
+
 </div>
 <div class="gap"></div>
     <div class="topnav">
         <a class="active" href="/coursestream/{{requestedID}}">Stream</a>
-        <a href="/chat/{{requestedID}}">Discussion</a>
-      </div>
-      <div class="container-3">
+        <a href="/chat/{{requestedID}}" onclick="takeData();");">Discussion</a>
+    </div>
+    <div class="container-3">
         <img src="/assets/ml.gif" alt="Snow" style="width:100%;">
-        <div class="centered">{{courseName}}</div>
-      </div>
+        <div id="coursename" target="{{courseName}}"class="centered">{{courseName}}</div>
+    </div>
       <div class="container">
         <div class="container-2">
           <p>Prerequisite : </p>
@@ -48,6 +50,7 @@
             <input type="submit" value="Add" onclick="addNext()">
           </div>
       </div>
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 </body>
 
 

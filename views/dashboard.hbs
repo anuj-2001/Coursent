@@ -22,30 +22,12 @@
 {{#if courses}}
    <div id="grid">
     {{#each courses}}
-        {{!-- <td><a href="//{{_id}}">{{courseName}}</a></td> --}}
-                {{!-- <div class="col" ontouchstart="this.classList.toggle('hover');">
-                    <a href="/coursestream/{{_id}}">
-                    <div class="container">
-                        <div class="front" style="background-image: url(./assets/ml.jpg)">
-                            <div class="inner">
-                                <p>{{courseName}}</p>
-                                <span>Lorem ipsum</span>
-                            </div>
-                        </div>
-                        <div class="back">
-                            <div class="inner">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
-                            </div>
-                        </div>
-                    </div>
-                    </a>
-                </div> --}}
-             
+    
                     <div class="course-card">
-                        <img class="thumbnail" src="https://edyoda.s3.amazonaws.com/media/blog-images/learn_machine_learning_courses_online.png" alt="Machine Learning"/>
-                        <h3>{{courseName}}</h3>
-                        <span class="author">{{../firstname}}</span>
-                        <span class="date"> | 23 Aug 2019</span>
+                        <img class="thumbnail" src="/assets/blue.jpg" alt="Course"/>
+                        <h3 id="coursename" target="{{courseName}}">{{courseName}}</h3>
+                        <span id="author" target="{{../firstname}}" class="author">{{../firstname}}</span>
+                        <span class="date">| {{formatDate createdAt 'MMMM Do YYYY'}}</span>
                         <p class="disc"> 
                             {{stripTags (stripNbsp (truncate courseDescription 100))}}
                         </p>
@@ -53,10 +35,10 @@
                             <input type="submit" value="View" onclick="location.href = '/coursestream/{{_id}}';">
                         </div>
                     </div>
-              
     {{/each}}
       </div>
 {{else}}
 <p>You have not created any courses</p>
-{{/if}}    
+{{/if}}   
+
 </body>

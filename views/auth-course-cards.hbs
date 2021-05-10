@@ -209,23 +209,22 @@ input[type=submit]:hover {
 </html>
 <body>
         <div class="topnav">
-    <a class="active" href="/home">Home</a>
-    <a href="/auth/google">
-      <img src="/assets/google.png" width="13px" height="13px">
-      Sign In with Google
-    </a>
-        </div>
+    <a class="active" href="/authhome">Home</a>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/auth/logout">Log Out</a>
+</div>
         <h1>Courses</h1>
            <div id="grid">
                {{#each courses}}
                   <div class="course-card">
                         <img class="thumbnail" src="/assets/blue.jpg" alt="Machine Learning"/>
                         <h3>{{courseName}}</h3>
+                        <span class="date" style="margin-left:100px">{{formatDate createdAt 'MMMM Do YYYY'}}</span>
                         <p class="disc"> 
                             {{stripTags (stripNbsp (truncate courseDescription 100))}}
                         </p>
                         <div style="position:absolute;justify-content:center;margin-left:110px;">
-                            <input type="submit" value="View" onclick="location.href = '/auth/google';">
+                            <input type="submit" value="View" onclick="location.href = '/coursestream/{{_id}}';">
                         </div>
                     </div>
                     {{else}}

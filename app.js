@@ -95,10 +95,10 @@ const bot = 'Bot';
 //Discussion Room
 io.on('connection',socket => {
     socket.on('joinRoom',({username,room})=>{
+      console.log(username+" "+room);
         const user = userJoin(socket.id,username,room);
         socket.join(user.room);
         socket.emit('message',formatMessage(bot,'Welcome to the discussion room!'));
-        console.log(username+" "+room);
         io.to(user.room).emit('roomUsers',{
             room: user.room,
             users: getRoomUsers(user.room)
