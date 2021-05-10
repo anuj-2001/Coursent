@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IT-Project</title>
+    <link rel="stylesheet" href="/css/course-stream.css">
+    <script src="/js/course-stream.js"></script>
+    <script src="/js/add.js"></script>
+  </head>
+</html>
+<body>
+  <div class="topnav-1">
+    <a href="/authhome">Home</a>
+    <a class="active" href="/dashboard">Dashboard</a>
+    <a href="/auth/logout">Log Out</a>
+    <p id="author" target="{{firstname}}" style="text-align:right;color:white;font-size:15px;padding-right:10px;font-weight:500;">Welcome, {{firstname}}</p> 
+
+</div>
+<div class="gap"></div>
+    <div class="topnav">
+        <a class="active" href="/coursestream/{{requestedID}}">Stream</a>
+        <a href="/chat/{{requestedID}}" onclick="takeData();");">Discussion</a>
+    </div>
+    <div class="container-3">
+        <img src="/assets/ml.gif" alt="Snow" style="width:100%;">
+        <div id="coursename" target="{{courseName}}"class="centered">{{courseName}}</div>
+    </div>
+      <div class="container">
+        <div class="container-2">
+          <p>Prerequisite : </p>
+        </div>
+        <div class="container-1">
+              <p>{{stripTags (stripNbsp (truncate coursePrerequisite))}}</p>
+          </div>
+          <hr style="margin-top:70px;margin-bottom:50px;height:2px;border-width:0;background-color:#004E7C;width: 50%;opacity: 0.1;">
+          <div class="container-2">
+          <p>Course Description : </p>
+          </div>
+          <div class="container-1">
+              <p>{{stripTags (stripNbsp (truncate courseDescription))}}</p>
+          </div>
+          <hr style="margin-top:70px;margin-bottom:50px;height:2px;border-width:0;background-color:#004E7C;width: 50%;opacity: 0.1;">
+          <div class="container-2">
+          <p>Week 1 : </p>
+          </div>
+          <div class="container-1">
+              <p>{{stripTags (stripNbsp (truncate courseWeek1))}}</p>
+          </div>
+          <hr id="hrtag" style="margin-top:70px;margin-bottom:50px;height:2px;border-width:0;background-color:#004E7C;width: 50%;opacity: 0.1;">
+      </div>
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</body>
+
+

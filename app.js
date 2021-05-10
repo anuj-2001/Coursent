@@ -12,6 +12,7 @@ const connectDB = require('./config/db')
 const socketio = require('socket.io');
 const formatMessage = require('./utils/messages');
 const http = require('http');
+const upload = require('express-fileupload')
 const { 
   userJoin, 
   getCurrentUser,
