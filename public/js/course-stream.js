@@ -14,6 +14,10 @@ function addNext(){
   div.className = 'container-5';
   div.innerHTML = `
   <textarea name="message" id="message" type="text"></textarea>
+  <label>Add Video : </label>
+  <input type="file" name="fileName" class="form-control" id="fileName"/>
+  <label>Add PDF : </label>
+  <input type="file" name="pdfName" class="form-control" id="pdfName"/>
     `;
   const div1 = document.createElement('div');
   div1.className = 'container-5';
@@ -25,8 +29,10 @@ function addNext(){
   document.querySelector('.container-6').appendChild(div);
   document.querySelector('.container-6').appendChild(div1);
   window.scrollBy(0,300);
+  
   console.log("Hello World")
 }  
+
 function writeWeek(){
   const div0 = document.createElement('div');
   div0.className = 'container-2';
@@ -40,6 +46,8 @@ function writeWeek(){
   div.className = 'container-1';
   div.innerHTML = `
   <p>${message.value}</p>
+  <button type="button" class="somebtn" onclick="location.href='/resources/{{fileName}}'">Get Video</button>
+  <button type="button" class="somebtn" onclick="location.href='/documents/{{pdfName}}'">Get PDF</button>
     `;
   document.querySelector('.container').appendChild(div);
   const hrtag = document.getElementById("hrtag");
