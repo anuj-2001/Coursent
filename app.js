@@ -12,6 +12,7 @@ const connectDB = require('./config/db')
 const socketio = require('socket.io');
 const formatMessage = require('./utils/messages');
 const http = require('http');
+const fs = require("fs");
 const upload = require('express-fileupload')
 const { 
   userJoin, 
@@ -121,6 +122,38 @@ io.on('connection',socket => {
         });
     });
 });
+
+
+
+
+
+// app.post('/addcourse',(req,res)=>{
+//   if(req.files){
+//       console.log(req.files);
+//       var file = req.files.file
+//       var filename = file.name
+//       console.log(filename)
+
+//       file.mv('./uploads/'+filename,function(err){
+//           if(err){
+//               res.send(err)
+//           }
+//           else{
+//               console.log('File Uploaded')
+//           }
+//       })
+//   }
+// })
+
+//video server
+
+
+
+
+//pdf server
+
+
+
 
 //Routes
 app.use('/', require('./routes/index'))
