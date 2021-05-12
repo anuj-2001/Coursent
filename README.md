@@ -1,5 +1,4 @@
-
-**Brief about the website : **
+**Brief about the website :**
 
 Coursent is a course content management system. It is an online learning platform used either to provide a digital supplement for a traditional classroom that meets regularly in person or to host an online course over the internet.
 
