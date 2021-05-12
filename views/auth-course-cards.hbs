@@ -221,7 +221,7 @@ input[type=submit]:hover {
                         <h3>{{courseName}}</h3>
                         <span class="date" style="margin-left:100px">{{formatDate createdAt 'MMMM Do YYYY'}}</span>
                         <p class="disc"> 
-                            {{stripTags (stripNbsp (truncate courseDescription 100))}}
+                            {{stripTags (stripNbsp (truncate courseDescription 150))}}
                         </p>
                         <div style="position:absolute;justify-content:center;margin-left:110px;">
                             <input type="submit" value="View" onclick="location.href = '/usercoursestream/{{_id}}';">
@@ -229,6 +229,7 @@ input[type=submit]:hover {
                     </div>
                     {{else}}
                         <p>No stories to display</p> 
+                        
                 {{/each}}
             </div>
 </body>

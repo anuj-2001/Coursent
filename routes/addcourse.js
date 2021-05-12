@@ -83,10 +83,11 @@ router.post('/', ensureAuth, async (req, res) => {
       Course.findOneAndUpdate({courseName : coursen},{$set : 
         {pdfName:pdfname}},function(err,foundList){
         if(!err){
-          res.redirect("/dashboard");
+          
         }
       });
   }
+  res.redirect("/dashboard");
   } catch (err) {
     console.error(err)
     res.render('error/500')
