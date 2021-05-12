@@ -22,6 +22,16 @@ router.get('/login', ensureGuest, (req, res) => {
     layout: 'login',
   })
 })
+router.get('/404', ensureAuth, (req, res) => {
+  res.render('errors/404', {
+    layout: '',
+  })
+})
+router.get('/500', ensureAuth, (req, res) => {
+  res.render('errors/500', {
+    layout: '',
+  })
+})
 
 router.get('/coursecards', ensureGuest, async(req, res) => {
   try {
